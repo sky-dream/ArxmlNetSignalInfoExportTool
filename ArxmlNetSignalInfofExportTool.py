@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# D:\000_Programs\Anaconda3\Scripts\pyinstaller.exe -F ArxmlNetSignalInfofExportTool.py -w -i Panda_001.ico
+# D:\000_Programs\Python\Python37\python.exe D:\000_Programs\Anaconda3\Scripts\pyinstaller.exe -F ArxmlNetSignalInfofExportTool.py -w -i Panda_001.ico
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtWidgets import QTableView, QApplication, QAction, QMessageBox, QMainWindow, QWidget, QDialog

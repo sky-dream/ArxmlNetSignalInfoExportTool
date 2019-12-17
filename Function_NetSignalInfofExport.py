@@ -4,6 +4,7 @@ import logging
 import canmatrix.log
 import lxml.etree
 import canmatrix.formats.arxml
+import canmatrix.formats.xlsx
 
 logger = canmatrix.log.setup_logger()
 canmatrix.log.set_log_level(logger, -1)
