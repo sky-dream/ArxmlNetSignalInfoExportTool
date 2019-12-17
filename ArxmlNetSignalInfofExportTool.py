@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+# D:\000_Programs\Anaconda3\Scripts\pyinstaller.exe -F ArxmlNetSignalInfofExportTool.py -w -i Panda_001.ico
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtWidgets import QTableView, QApplication, QAction, QMessageBox, QMainWindow, QWidget, QDialog
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QHeaderView
 from PyQt_NetSignalInfoExportTool import Ui_NetSignalInfoExportTool
 import sys
-import xlrd
-import xlwt
-import os
+#import xlrd
+#import xlwt
+#import os
 import logging
 import canmatrix.log
 import Function_NetSignalInfofExport
@@ -79,7 +79,7 @@ class MainWindow(QMainWindow, Ui_NetSignalInfoExportTool):
         cluster, ns = Function_NetSignalInfofExport.arxml_file_load(
             self.ArxmlInputFilePath)
         Function_NetSignalInfofExport.dump_signal_info(
-            cluster, self.SignalInfoTableFolderPath)
+            cluster, self.ArxmlInputFilePath.split("\\")[-1], self.SignalInfoTableFolderPath)
         logger.info('pushButton_GenerateSignalInfoTable.')
         QMessageBox.information(
             self, u'Tips', 'Net Signal Info Table successfully generated based on arxml database.')
